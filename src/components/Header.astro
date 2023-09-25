@@ -1,0 +1,49 @@
+---
+import HeaderBtn from "./HeaderBtn.astro";
+
+---
+
+<header class="py-8 px-4 mx-auto max-w-xl lg:py-16 lg:px-6">
+    <div class="mx-auto text-center mb-8 lg:mb-16">
+        <h2 class="mb-4 text-5xl tracking-tight font-extrabold text-white">
+            SpaceX launches 🤘
+        </h2>
+        <p class="font-light text-gray-500 smm:text-xl dark:text-gray-400">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque aperiam quaerat perspiciatis saepe dolorem! Quos voluptatem sunt atque natus quia tenetur hic. Maxime non illum cupiditate id nulla, consequatur exercitationem?
+        </p>
+    </div>
+    <nav class="flex flex-col items-center justify-between w-full text-center md:flex-row">
+        <HeaderBtn class="text-white" href="/">
+            <svg slot="before" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                <path d="M12 8c2.648 0 5.028 .826 6.675 2.14a2.5 2.5 0 0 1 2.326 4.36c0 3.59 -4.03 6.5 -9 6.5c-4.875 0 -8.845 -2.8 -9 -6.294l-1 -.206a2.5 2.5 0 0 1 2.326 -4.36c1.646 -1.313 4.026 -2.14 6.674 -2.14z" />
+                <path d="M12 8l1 -5l6 1" />
+                <path d="M19 4m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                <circle cx="9" cy="13" r=".5" fill="currentColor" />
+                <circle cx="15" cy="13" r=".5" fill="currentColor" />
+                <path d="M10 17c.667 .333 1.333 .5 2 .5s1.333 -.167 2 -.5" />
+              </svg>
+            Ultimos lanzamientos
+        </HeaderBtn>
+        <HeaderBtn class="text-white" href="/about">
+            <svg slot="before" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0" />
+                <path d="M12 9h.01" />
+                <path d="M11 12h1v4h1" />
+              </svg>
+            Acerca del proyecto
+        </HeaderBtn>
+        <HeaderBtn class="text-white" href="/odltest">
+            <svg slot="before" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                <path d="M12 12l0 .01" />
+                <path d="M14.828 9.172a4 4 0 0 1 0 5.656" />
+                <path d="M17.657 6.343a8 8 0 0 1 0 11.314" />
+                <path d="M9.168 14.828a4 4 0 0 1 0 -5.656" />
+                <path d="M6.337 17.657a8 8 0 0 1 0 -11.314" />
+              </svg>
+            Viejos lanzamientos
+        </HeaderBtn>
+    </nav>
+</header>
