@@ -1,0 +1,17 @@
+---
+
+
+const res = await fetch("https://api.spacexdata.com/v5/launches/query", {
+    body: JSON.stringify({
+        options:{
+            limit:12,
+        }
+    })
+})
+const data = await res.json()
+
+console.log(data);
+
+
+---
+
