@@ -1,7 +1,7 @@
 # Lazmaniento de SpaceX V5 - Astro 3.0
 
 
-![screen-shots](./assets\spacex-launches.jpeg)
+![screen-shots]([./assets\spacex-launches.jpeg](https://github.com/mendozalz/Astro-3.0/blob/main/assets/spacex-launches.jpeg))
 
 ## 🚀 Estructura del proyecto
 
