@@ -1,5 +1,5 @@
 ---
-import { getLaunchid} from "../../service/spacex-service";
+import { getLaunchid, getLaunches} from "../../service/spacex-service";
 import Layout from "../../layouts/Layout.astro";
 
 export const prerender = false
@@ -11,13 +11,13 @@ let launch
 launch = await getLaunchid({id})
 
 // Desactivado mientras esta el modo SSR activado
-/* export async function getStaticPaths() {
+export async function getStaticPaths() {
 
     const launches = await getLaunches()
      return launches.map(launch=>(
         {params: {id: launch.id}}
      ))
-} */
+}
 
 ---
 <Layout>
