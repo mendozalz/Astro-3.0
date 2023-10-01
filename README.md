@@ -1,7 +1,7 @@
 # Lazmaniento de SpaceX V5 - Astro 3.0
 
 
-![screen-shots](assets\spacex-launches.jpeg)
+![screen-shots](./assets\spacex-launches.jpeg)
 
 ## 🚀 Estructura del proyecto
 
