@@ -1,20 +1,11 @@
-# Astro Starter Kit: Basics
+# Lazmaniento de SpaceX V5 - Astro 3.0
 
-```sh
-npm create astro@latest -- --template basics
-```
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+![screen-shots](assets\spacex-launches.jpeg)
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## 🚀 Estructura del proyecto
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
-
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
+La estructura del proyectos es la siguiente:
 
 ```text
 /
@@ -23,32 +14,32 @@ Inside of your Astro project, you'll see the following folders and files:
 ├── src/
 │   ├── components/
 │   │   └── Card.astro
+│   │   └── Header.astro
+│   │   └── HeaderBtn.astro
+│   │   └── Launches.astro
 │   ├── layouts/
 │   │   └── Layout.astro
 │   └── pages/
-│       └── index.astro
+│   │   └── launch/
+│   │   │   └── [id].astro
+│   │   └── index.astro
+│   └── service/
+│   │   └── spacex-service.ts
+│   └── types/
+│   │   └── api.ts
 └── package.json
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+Practicas con el framework de Astro en su versión 3.0 consumiendo la API de SpaceX en su versión #5 [SpaceX REST API](https://github.com/r-spacex/SpaceX-API) y siguiendo el tutorial de [Midudev](https://www.youtube.com/watch?v=RB5tR_nqUEw)
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+## 👷‍♂️ Como usar este repositorio
 
-Any static assets, like images, can be placed in the `public/` directory.
+Sirvete de descargar y replicar el proyecto, tambien si quieres agregar tu aporte para mejorar el mismo solo crea un fork y haz un PR para su previa revisión.
 
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
+| Commando                  | Acción                                           |
 | :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+| `npm install`             | Para instalar las dependecias                    |
+| `npm run dev`             | Para desplegar el proyecto `localhost:4321`      |
+| `npm run build`           | Para construit el proyecto en `./dist/`          |
 
-## 👀 Want to learn more?
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
