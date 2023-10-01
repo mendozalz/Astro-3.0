@@ -1,17 +1,21 @@
 ---
+import { type SpaceX } from "../types/api";
+import Card from "./Card.astro";
+import {getLaunches} from "../service/spacex-service";
 
-
-const res = await fetch("https://api.spacexdata.com/v5/launches/query", {
-    body: JSON.stringify({
-        options:{
-            limit:12,
-        }
-    })
-})
-const data = await res.json()
-
-console.log(data);
-
-
+const launches = await getLaunches()
 ---
 
+<div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+    {
+        launches.map((launch)=>(
+            <Card
+            id={launch.id}
+            img={launch.links.patch.small}
+            success={launch.success}
+            flightNumber={launch.flight_number}
+            details={launch.details}
+            />
+        ))
+    }
+</div>

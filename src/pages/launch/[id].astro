@@ -1,0 +1,100 @@
+---
+import { getLaunchid} from "../../service/spacex-service";
+import Layout from "../../layouts/Layout.astro";
+
+export const prerender = false
+
+const {id} = Astro.params
+
+let launch
+
+launch = await getLaunchid({id})
+
+// Desactivado mientras esta el modo SSR activado
+/* export async function getStaticPaths() {
+
+    const launches = await getLaunches()
+     return launches.map(launch=>(
+        {params: {id: launch.id}}
+     ))
+} */
+
+---
+<Layout>
+<section>
+    <div class="">
+        <img class="w-[350px] m-auto" src={launch.links.patch.small}>
+        <div class="z-10 container-small m-auto w-[45%] flex justify-end">
+            <small class="small">{launch.name}<span>.</span><span class="role">Vuelo{launch.flight_number}</span></small>
+        </div>
+    </div>
+    <div class="mt-8 m-auto w-[70%] parrafo text-white text-xl text-center">
+        <p>{launch.details}</p>
+    </div>
+</section>
+</Layout>
+<style>
+@import url(https://fonts.googleapis.com/css?family=Cutive);
+@import url(https://fonts.googleapis.com/css?family=Advent+Pro);
+* {
+  box-sizing: border-box;
+}
+div{
+    position: relative
+}
+.small {
+    width: 155px;
+    height: 100px;
+    margin: -11% -16% 0% 0%;
+    background: #fcfcfc;
+    border-radius: 50%;
+    position: relative;
+    box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.2), 0 3px 2px rgba(0, 0, 0, 0.2);
+    line-height: 90px;
+    font-weight: bold;
+    color: #505b65;
+    text-align: center;
+    font-size: 12px;
+    font-family: "Cutive", serif;
+  }
+  
+  .small span {
+    color: #f15755;
+  }
+  .small .role {
+  text-transform: uppercase;
+  position: absolute;
+  font-family: "Advent Pro", sans-serif;
+  font-size: 12px;
+  color: #a2a7ac;
+  left: 18px;
+  bottom: 29px;
+  line-height: 1;
+  text-align: right;
+}
+
+.small:after {
+  content: "";
+  position: absolute;
+  border-radius: inherit;
+  z-index: -1;
+  background: #c8c8c8;
+  background: linear-gradient(#c8c8c8, #dcdcdc);
+  left: -15px;
+  top: -15px;
+  right: -15px;
+  bottom: -15px;
+  box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.2), 0 1px 0 rgba(255, 255, 255, 0.9);
+}
+
+.small:before {
+  content: "";
+  position: absolute;
+  height: 3px;
+  width: 30px;
+  background: #c8c8c8;
+  border-radius: 40px;
+  left: 47%;
+  bottom: 40px;
+}
+</style>
